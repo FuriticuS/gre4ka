@@ -5,11 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/resetstyles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" type="text/css" href="js/pageslider/jquery.pagepiling.min.css"/>
+
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pageslider/jquery.pagepiling.min.js"></script>
 
     <title>Gre4ka</title>
 </head>
 <body>
+<div id="pagepiling">
 
+    <div class="first-block section" id="page1">
+        <div class="parallax">
+
+            <div class="wave">
+                <div class="wave-green">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;"><path d="M0.00,49.98 C268.34,134.70 250.84,-75.48 500.00,49.98 L709.65,-21.20 L-129.51,-10.36 Z" style="stroke: none; fill: #C8D24E;"></path></svg>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <header>
+                    <div class="header-menu">
+                        <a class="header-menu-btn" href="#">
+                            <svg width="30" height="20" viewBox="0 0 30 20"  xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2H29.2857" stroke-width="3"/>
+                                <path d="M0 10H22" stroke-width="3"/>
+                                <path d="M0 18H29.2857" stroke-width="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header-logo">
+                        <a href="https://southmedia.ru/" target="_blank">
+                            <img src="img/head/Logo.svg" alt="logo" class="logo-img img-svg">
+                        </a>
+                    </div>
+                </header>
+
+                <nav class="menu-list">
+                    <div class="header-menu-block">
+                        <a class='header-menu-btn' href="#">
+                            <img src="img/head/menu/cross.svg" alt="menu">
+                        </a>
+                        <ul class="menu">
+                            <li data-menuanchor="page1"><a href="#page1">Главная</a></li>
+                            <li data-menuanchor="page2"><a href="#page2">Подбор блюд</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-title">
+                    <div class="main-text">
+                        <h1>Как понять, что греча твое все?</h1>
+                        <p>Укажи, чего ты хочешь<br>и получи подборку блюд из гречи</p>
+                    </div>
+                </main>
+
+                <div class="parallax-images">
+                    <div class="parallax-images__item">
+                        <div class="images-paralax__pie">
+                            <img src="img/main/pie.svg" alt="pancakes">
+                        </div>
+                    </div>
+
+                    <div class="parallax-images__item">
+                        <div class="images-paralax__grains">
+                            <img src="img/main/grains.png" alt="grains">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-button">
+                    <h2>Начать!</h2>
+
+                    <div class="arrow one">
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 0.255249V15.0986" stroke-width="3"/>
+                            <path d="M1.68005 9.08105L8.49998 15.4998L15.3199 9.08105" stroke-width="3"/>
+                        </svg>
+                    </div>
+
+                    <div class="arrow two">
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 0.255249V15.0986" stroke-width="3"/>
+                            <path d="M1.68005 9.08105L8.49998 15.4998L15.3199 9.08105" stroke-width="3"/>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="second-block section" id="page2">
+
+        <div class="container">
+            <header>
+                <div class="header-menu">
+                    <a class="header-menu-btn-second" href="#">
+                        <svg width="30" height="20" viewBox="0 0 30 20"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 2H29.2857" stroke-width="3"/>
+                            <path d="M0 10H22" stroke-width="3"/>
+                            <path d="M0 18H29.2857" stroke-width="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </header>
+
+            <nav class="menu-list-second">
+                <div class="header-menu-block">
+                    <a class='header-menu-btn-second' href="#">
+                        <img src="img/head/menu/cross.svg" alt="menu">
+                    </a>
+                    <ul class="menu">
+                        <li data-menuanchor="page1"><a href="#page1">Главная</a></li>
+                        <li data-menuanchor="page2"><a href="#page2">Подбор блюд</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="main-order">
+
+                <main class="main-title">
+                    <div class="main-text">
+                        <h2>Твоя греча</h2>
+                        <p>Укажи, чего ты хочешь<br>и получи подборку блюд из гречи</p>
+                    </div>
+                </main>
+
+                <form class="main-order-form">
+                    <p>Насколько ты любишь гречку?</p>
+
+                    <div class="buckwheat">
+                        <img src="img/form/buckwheat_bg.png" alt="buck">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-logo">
+                <a href="https://southmedia.ru/" target="_blank">
+                    <img src="img/head/Logo.svg" alt="logo" class="logo-img img-svg">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
