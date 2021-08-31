@@ -139,10 +139,46 @@
                 </main>
 
                 <form class="main-order-form">
-                    <p>Насколько ты любишь гречку?</p>
+                    <div class="container-small">
 
-                    <div class="buckwheat">
-                        <img src="img/form/buckwheat_bg.png" alt="buck">
+                        <div class="range-like">
+                            <p>Насколько ты любишь гречку?</p>
+                            <input type="range" min="1" max="100" id="range-like" class="slider-range">
+                            <p>на все <span id="value-like"></span>%</p>
+                        </div>
+
+                        <div class="range-time">
+                            <p>Время на приготовление</p>
+
+                            <div class="range-time-slider">
+                                <div class="time-slider-track"></div>
+
+                                <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()">
+                                <input type="range" min="0" max="100" value="30" id="slider-2" oninput="slideTwo()">
+
+                                <div class="range-time-slider-values">
+                                    <span id="range1"> 0 </span>
+                                    <span> &dash; </span>
+                                    <span id="range2"> 100 </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="time-eat">
+                            <p>Время приема</p>
+                        </div>
+
+                        <div class="user-info">
+
+                        </div>
+
+                        <button>Получить по гречке</button>
+
+                        <div class="buckwheat">
+                            <img src="img/form/buckwheat_bg.png" alt="buck">
+                        </div>
+
                     </div>
                 </form>
             </div>
