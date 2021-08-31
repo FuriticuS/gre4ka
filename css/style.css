@@ -616,7 +616,11 @@ header {
     border-radius: 6px;
     outline: none;
 }
-/*---------------------- form validate  ----*/
+
+.user-info .user-order {
+
+}
+    /*---------------------- form validate  ----*/
 .user-info ._error{
     border: 1px solid #FF4016;
 }

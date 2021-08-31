@@ -150,11 +150,22 @@ function fillColor(){
 document.addEventListener('DOMContentLoaded', function (){
     const form = document.getElementById('main-order-form');
 
-    form.addEventListener('submit', function (e){
+    form.addEventListener('submit', formSend);
+
+    async function formSend(e){
         e.preventDefault();
 
         let error = formValidate(form);
-    })
+
+        let formData = new FormData(form);
+        console.log(formData);
+
+        if(error === 0){
+            form.innerHTML = `<h2 class="user-order">Ваш заказ получен</h2>`
+        } else {
+            alert('Заполните обязательные поля');
+        }
+    }
 
     function formValidate(form){
         let error = 0;
@@ -169,6 +180,8 @@ document.addEventListener('DOMContentLoaded', function (){
                 error++;
             }
         }
+
+        return error;
     }
 
     function formAddError(input){
