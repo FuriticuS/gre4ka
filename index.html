@@ -12,6 +12,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/pageslider/jquery.pagepiling.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
 
     <title>Gre4ka</title>
 </head>
@@ -138,28 +139,33 @@
                     </div>
                 </main>
 
-                <form class="main-order-form">
+                <form class="main-order-form" id="main-order-form">
                     <div class="container-small">
 
                         <div class="range-like">
                             <p>Насколько ты любишь гречку?</p>
                             <input type="range" min="1" max="100" id="range-like" class="slider-range">
-                            <p>на все <span id="value-like"></span>%</p>
+                            <p class="range-values-text">на все <span id="value-like"></span>%</p>
                         </div>
 
                         <div class="range-time">
                             <p>Время на приготовление</p>
 
                             <div class="range-time-slider">
-                                <div class="time-slider-track"></div>
 
-                                <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()">
-                                <input type="range" min="0" max="100" value="30" id="slider-2" oninput="slideTwo()">
+                                <div class="range-time-container">
+
+                                    <div class="time-slider-track"></div>
+
+                                    <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()">
+                                    <input type="range" min="0" max="100" value="30" id="slider-2" oninput="slideTwo()">
+                                </div>
 
                                 <div class="range-time-slider-values">
                                     <span id="range1"> 0 </span>
                                     <span> &dash; </span>
                                     <span id="range2"> 100 </span>
+                                    мин.
                                 </div>
                             </div>
 
@@ -167,13 +173,39 @@
 
                         <div class="time-eat">
                             <p>Время приема</p>
+
+                            <div class="time-eat-choices">
+                                <div class="time-eat-check-items">
+                                    <input type="checkbox" class="time-eat-check-item" id="breakfast">
+                                    <label for="breakfast" class="time-eat-label">Завтрак</label>
+                                </div>
+                                <div class="time-eat-check-items">
+                                    <input type="checkbox" class="time-eat-check-item" id="lunch">
+                                    <label for="lunch" class="time-eat-label">Обед</label>
+                                </div>
+                                <div class="time-eat-check-items">
+                                    <input type="checkbox" class="time-eat-check-item" id="dinner">
+                                    <label for="dinner" class="time-eat-label">Ужин</label>
+                                </div>
+                                <div class="time-eat-check-items">
+                                    <input type="checkbox" class="time-eat-check-item" id="nightly">
+                                    <label for="nightly" class="time-eat-label">Ночной дожор</label>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="user-info">
-
+                            <div class="user-info-name">
+                                <label for="form-name" class="user-info-label">Имя</label>
+                                <input type="text" id="form-name" name="name" class="user-info-input _req">
+                            </div>
+                            <div class="user-info-phone">
+                                <label for="form-phone" class="user-info-label">Телефон</label>
+                                <input type="text" id="form-phone" name="name" class="user-info-input _req">
+                            </div>
                         </div>
 
-                        <button>Получить по гречке</button>
+                        <button type="submit" class="form-btn">Получить по гречке</button>
 
                         <div class="buckwheat">
                             <img src="img/form/buckwheat_bg.png" alt="buck">

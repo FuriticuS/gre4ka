@@ -143,5 +143,47 @@ function slideTwo(){
 function fillColor(){
     percent1 = (sliderOne.value / sliderMaxValue) * 100;
     percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+    sliderTrack.style.background = `linear-gradient(to right, #C8D24E ${percent1}% , #C8D24E ${percent1}% , #C8D24E ${percent2}%, #C8D24E ${percent2}%)`;
 }
+
+// form validation
+document.addEventListener('DOMContentLoaded', function (){
+    const form = document.getElementById('main-order-form');
+
+    form.addEventListener('submit', function (e){
+        e.preventDefault();
+
+        let error = formValidate(form);
+    })
+
+    function formValidate(form){
+        let error = 0;
+        let formReq = document.querySelectorAll('._req');
+
+        for (let i = 0; i<formReq.length; i++){
+            const input = formReq[i];
+            formRemoveError(input);
+
+            if(input.value === ''){
+                formAddError(input);
+                error++;
+            }
+        }
+    }
+
+    function formAddError(input){
+        input.classList.add('_error');
+    }
+
+    function formRemoveError(input){
+        input.classList.remove('_error');
+    }
+
+    // mask phone
+    let element = document.getElementById('form-phone');
+    let maskOptions = {
+        mask: '+7(000)000-00-00',
+        lazy: false
+    }
+    let mask = new IMask(element, maskOptions);
+})
